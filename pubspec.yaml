@@ -1,0 +1,68 @@
+name: kyawthiha
+description: A new Flutter project.
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+
+isar_version: &isar_version 3.1.0
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+
+  #network
+  retrofit: ^4.0.3
+  pretty_dio_logger: ^1.3.1
+
+  #storage
+  shared_preferences: ^2.2.2
+  floor: ^1.4.2
+
+  #state management
+  flutter_bloc: ^8.1.3
+
+  #service locator
+  get_it: ^7.6.4
+
+  #side menu
+  flutter_side_menu: ^0.4.0
+
+  #comparing dart object
+  equatable: ^2.0.5
+
+  #chached image
+  cached_network_image: ^3.2.0
+
+  #date formatting
+  intl: ^0.18.0
+
+  #share
+  share_plus: ^7.2.1
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+  retrofit_generator: '>=7.0.0 <8.0.0'
+  floor_generator: ^1.4.2
+  build_runner: '>=2.3.0 <4.0.0'
+  json_serializable: ^6.6.2
+
+flutter:
+  uses-material-design: true
+
+  fonts:
+    - family: Roboto
+      fonts:
+        - asset: assets/fonts/Roboto-Regular.ttf
+        - asset: assets/fonts/Roboto-Italic.ttf
+          style: italic
+        - asset: assets/fonts/Roboto-Bold.ttf
+          weight: 700
+
