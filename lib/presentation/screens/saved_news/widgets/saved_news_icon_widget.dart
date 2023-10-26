@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:kyawthiha/data/data_sources/local/database/app_database.dart';
@@ -6,7 +5,6 @@ import 'package:kyawthiha/domain/entities/news/news.dart';
 import 'package:kyawthiha/domain/usecases/news/remove_saved_news.dart';
 import 'package:kyawthiha/domain/usecases/news/save_news.dart';
 
-import '../../../../injection_container.dart';
 import '../../../bloc/saved_news/saved_news_bloc.dart';
 
 class SavedNewsIconWidget extends StatefulWidget {
@@ -44,7 +42,7 @@ class _SavedNewsIconWidgetState extends State<SavedNewsIconWidget> {
               return IconButton(
                   onPressed: () async {
                     try {
-                      await widget.removeSavedNewsUseCase(params: widget.newsEntity);
+                      await widget.removeSavedNewsUseCase(params: state.data?.first);
                       refresh();
                     } catch (e) {
                       ///
